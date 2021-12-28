@@ -1,0 +1,30 @@
+{
+  "name": "solmate",
+  "version": "1.0.0",
+  "description": "![SolMATe](https://user-images.githubusercontent.com/5258974/147442299-12cafaa8-02f9-4ba4-b570-1f10ba70ddb3.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveenarun/SolMATe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naveenarun/SolMATe/issues"
+  },
+  "homepage": "https://github.com/naveenarun/SolMATe#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.2",
+    "hardhat": "^2.8.0"
+  },
+  "dependencies": {
+    "prb-math": "^2.4.1"
+  }
+}
