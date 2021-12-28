@@ -1,14 +1,15 @@
-# SolMATe - The Solidity Matrix Environment
 
-![SolMATe](https://user-images.githubusercontent.com/5258974/147442299-12cafaa8-02f9-4ba4-b570-1f10ba70ddb3.png)
+<img src="https://user-images.githubusercontent.com/5258974/147535117-41178e9c-6aff-4512-8a84-a24f4a95eccf.png" alt="nta_consulting_small" height="200" align="right"/> 
 
-![](https://img.shields.io/badge/PRs-welcome-brightgreen)
+# SolMATe - The Solidity Matrix Environment 
+
+![](https://img.shields.io/badge/PRs-welcome-brightgreen) ![](https://img.shields.io/badge/solidity-0.8.11-blue)
 
 **SolMATe is the fundamental package for floating-point math, array manipulation, and linear algebra in Ethereum smart contracts.** With SolMATe you get:
 
 - Gas-efficient operations with signed 59.18-decimal fixed-point numbers
-- Functions for manipulating vectors and matrices
-- Basic linear algebra routines
+- Functions for manipulating vectors and matrice
+- Linear algebra routines enabling the implementation of machine learning algorithms, such as multivariate linear regression and deep neural networks
 
 | ℹ️ **Contributors**: Please see the [Development](#development) section of this README. |
 | --- |
