@@ -1,5 +1,4 @@
-
-<img src="https://user-images.githubusercontent.com/5258974/147535117-41178e9c-6aff-4512-8a84-a24f4a95eccf.png" alt="nta_consulting_small" height="200" align="right"/> 
+<img src="https://user-images.githubusercontent.com/5258974/147603258-8abef830-9d86-4701-bd80-523ef8033f8a.png" alt="nta_consulting_small" height="200" align="right"/> 
 
 # SolMATe - The Solidity Matrix Environment 
 
