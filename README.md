@@ -7,7 +7,7 @@
 **SolMATe is the fundamental package for floating-point math, array manipulation, and linear algebra in Ethereum smart contracts.** With SolMATe you get:
 
 - Gas-efficient operations with signed 59.18-decimal fixed-point numbers
-- Functions for manipulating vectors and matrice
+- Functions for manipulating vectors and matrices
 - Linear algebra routines enabling the implementation of machine learning algorithms, such as multivariate linear regression and deep neural networks
 
 **SolMATe is the first-ever package making it possible to engage in all aspects of a machine learning pipeline directly on the blockchain** - from data collection to model training and evaluation - without having to involve an off-chain oracle. See below for an example of a key ML algorithm (multiple linear regression) implemented as a smart contract.
