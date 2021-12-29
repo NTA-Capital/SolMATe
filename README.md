@@ -10,7 +10,7 @@
 - Functions for manipulating vectors and matrice
 - Linear algebra routines enabling the implementation of machine learning algorithms, such as multivariate linear regression and deep neural networks
 
-**SolMATe makes it possible to engage in all aspects of a machine learning pipeline directly on the blockchain** - from data collection to model training and evaluation - without having to involve an external oracle. See below for an example of a key ML algorithm (multiple linear regression) implemented as a smart contract.
+**SolMATe is the first-ever package making it possible to engage in all aspects of a machine learning pipeline directly on the blockchain** - from data collection to model training and evaluation - without having to involve an external oracle. See below for an example of a key ML algorithm (multiple linear regression) implemented as a smart contract.
 
 # Usage
 
