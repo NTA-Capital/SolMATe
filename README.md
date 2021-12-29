@@ -10,48 +10,30 @@
 - Functions for manipulating vectors and matrice
 - Linear algebra routines enabling the implementation of machine learning algorithms, such as multivariate linear regression and deep neural networks
 
-| ℹ️ **Contributors**: Please see the [Development](#development) section of this README. |
-| --- |
-
-- **Website:** https://TBD
-- **Documentation:** https://TBD
-- **Mailing list:** https://TBD
-- **Source code:** https://github.com/naveenarun/SolMATe/
-- **Contributing:** https://TBD
-- **Bug reports:** https://github.com/naveenarun/SolMATe/issues
-- **Report a security vulnerability:** https://TBD
-
-# Install
-
-TBD
+**SolMATe makes it possible to engage in all aspects of a machine learning pipeline directly on the blockchain** - from data collection to model training and evaluation - without having to involve an external oracle. See below for an example of a key ML algorithm (multiple linear regression) implemented as a smart contract.
 
 # Usage
 
-The following smart contract calculates the eigenvalues of a 2x2 matrix, and consumes 884090 gas.
+The following smart contract performs multiple linear regression solving the equation `Ax=b`, where `A` is a matrix of coefficients, `b` is a vector of outputs, and `x` is the solution vector. It uses approximately `8e7` gas - making it impractical for Layer 1 applications but practical for Layer 2 as of 2022.
 
 ```solidity
-// SPDX-License-Identifier: TBD
+// SPDX-License-Identifier: BSD-4-Clause
 pragma solidity >=0.8.4;
-import "./PRBMathSD59x18.sol";
+import "prb-math/contracts/PRBMathSD59x18.sol";
 import "./VectorUtils.sol";
 import "./MatrixUtils.sol";
 
-contract EigenvalueSolver {
+contract SolMATe_demo {
     using PRBMathSD59x18 for int256;
     using VectorUtils for int256[];
     using MatrixUtils for int256[][];
-    
-    function eigensolve() public returns (int256[] memory) {
-        // Get eigenvalues of matrix [[0,1],[-2,-3]]
-        // Matrix is represented as [[0e18,1e18],[-2e18,-3e18]] in SolMATe due to 59x18 fixed-point notation.
-        int256[][] memory a = MatrixUtils.createMatrix(2, 2);
-        a[0][0] = 0e18;
-        a[1][0] = 1e18;
-        a[0][1] = -2e18;
-        a[1][1] = -3e18;
-        
-        // Calculate the eigenvalues
-        return a.eigenvalues(); // Returns [-2, -1], represented as [-2.000045778229896671e18, -.999954221770103365e18]
+
+    function multipleLinearRegression(int256[][] memory a, int256[] memory b) public pure returns (int256[][] memory) {
+        int256[][] memory q;
+        int256[][] memory r;
+        int256[][] memory b_mat = b.convertTo59x18().toMatrix();
+        (q,r) = a.convertTo59x18().QRDecomposition();
+        return r.backSubstitute(q.T().dot(b_mat));
     }
 }
 ```
@@ -65,16 +47,6 @@ int256 b = 2e18; // represents b = 2
 a.mul(b);  // returns 3e18, or 3000000000000000000, which represents 3
 ```
 
+# Contributing
 
-# Installation
-
-Copy the files TBD to your Solidity project.
-
-
-
-Call for Contributions
-----------------------
-
-TBD
-
-
+SolMATe uses Hardhat for scripts and unit testing. Pull requests are welcome - especially those pertaining to documentation, optimizing algorithms, and developing test cases.
