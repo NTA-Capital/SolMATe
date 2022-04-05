@@ -42,7 +42,7 @@ In SolMATe, all fixed point numbers are scaled by `1e18` and stored as `int256` 
 
 ```solidity
 using PRBMathSD59x18 for int256;
-int256 a = 1.5e18; // represents a = 2
+int256 a = 1.5e18; // represents a = 1.5
 int256 b = 2e18; // represents b = 2
 a.mul(b);  // returns 3e18, or 3000000000000000000, which represents 3
 ```
